@@ -5,8 +5,8 @@ This a thin wrapper around jasmine spies that allows
 
 Example usage:
 ```TypeScript
-export interface IBiz{ helloWorld():string
-
+export interface IBiz{ 
+	helloWorld():string
 }
 
 export class Program{ 
@@ -25,7 +25,7 @@ export class Program{
 
 
 var mock = new Mock<IBiz>();
-mock.Setup(p=>p.helloWorld()).andReturns("Hey");
+mock.Setup(p=>p.helloWorld).andReturns("Hey");
 
 //use the mock
 var p = new Program(p);
