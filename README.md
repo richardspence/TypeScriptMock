@@ -25,9 +25,9 @@ export class Program{
 
 
 var mock = new Mock<IBiz>();
-mock.Setup(p=>p.helloWorld).andReturns("Hey");
+mock.setup(p=>p.helloWorld).andReturns("Hey");
 
 //use the mock
-var p = new Program(p);
+var p = new Program(mock.getObject());
 p.printHelloWorld();
 ```
