@@ -13,7 +13,7 @@ interface IMockSetupMany<T> {
 
 class Mock<T> implements IMock<T>{
     private object: T;
-    private spies: amp.models.IMap<jasmine.Spy> = {};
+    private spies: { [index: string]: jasmine.Spy } = {};
     constructor() {
         this.object = <T><any>{
             __mockParent: this,
